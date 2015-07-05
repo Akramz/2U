@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="10dp"
+    tools:context=".MainActivity"
+    android:background="#ffffffff"
+    android:padding="0dp"
+    android:id="@+id/MainActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/topBar"
+        android:background="#fff8f8f8">
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchInput"
+            android:maxWidth="300dp"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/addButton"
+            android:src="@mipmap/ic_action_user_add_two"
+            android:onClick="GoToAddActivity"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/emailsButton"
+            android:src="@mipmap/ic_action_mail_two"
+            android:onClick="GoToEmailsActivity"
+            android:longClickable="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:id="@+id/separatorOne"
+        android:visibility="visible"
+        android:layout_below="@+id/topBar"
+        android:background="@android:color/darker_gray"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/separatorOne"
+        android:id="@+id/title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Contacts"
+            android:id="@+id/contactsText"
+            android:textColor="#22A7F0"
+            android:textSize="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="30dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:id="@+id/separatorTwo"
+        android:visibility="visible"
+        android:layout_below="@+id/title"
+        android:background="@android:color/darker_gray"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/separatorTwo"
+        android:id="@+id/ContactsList">
+        
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ContactsListView"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp">
+        </ListView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+

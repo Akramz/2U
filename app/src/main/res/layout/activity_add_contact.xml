@@ -1,0 +1,181 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context="com.laxo.lofaif.favirand.AddContact"
+    android:padding="0dp"
+    android:background="#ffffffff"
+    android:id="@+id/addContactActivity">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/topBar"
+        android:background="#fff8f8f8">
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/Logo"
+            android:src="@mipmap/ic_action_add_contact"
+            android:layout_alignParentTop="true"/>
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/importButton"
+            android:onClick="ImportAllContacts"
+            android:src="@mipmap/ic_action_import_two"
+            android:layout_centerHorizontal="true" />
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/backButton"
+            android:src="@mipmap/ic_action_back_two"
+            android:onClick="GoToMainActivity"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:id="@+id/separatorOne"
+        android:visibility="visible"
+        android:layout_below="@+id/topBar"
+        android:background="@android:color/darker_gray"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/separatorOne"
+        android:id="@+id/title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="New Contact"
+            android:id="@+id/newContactText"
+            android:textColor="#22A7F0"
+            android:textSize="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="30dp"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.2dp"
+        android:id="@+id/separatorTwo"
+        android:visibility="visible"
+        android:layout_below="@+id/title"
+        android:background="@android:color/darker_gray"/>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/separatorTwo"
+        android:id="@+id/addContactForm">
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back"
+            android:id="@+id/addContactName"
+            android:hint="Name .. "
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"/>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back"
+            android:inputType="phone"
+            android:hint="Phone .. "
+            android:id="@+id/addContactPhone"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/addContactName"
+            android:layout_alignLeft="@+id/addContactEmail"
+            android:layout_alignStart="@+id/addContactEmail"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"/>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:background="@drawable/back"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/addContactEmail"
+            android:hint="Email .. "
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_below="@+id/addContactPhone"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:singleLine="true"
+            android:lines="1"
+            android:maxLines="1"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/addContact"
+            android:src="@mipmap/ic_action_add_user_button"
+            android:onClick="addContactClicked"
+            android:longClickable="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/addContactEmail"
+            android:layout_marginTop="50dp"
+            />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_alignTop="@+id/addContactPhone"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
